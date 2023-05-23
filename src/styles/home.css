@@ -1,0 +1,12 @@
+.carrusel {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.card{
+    flex-shrink: 0;
+}
+
+.card-text{
+    white-space: break-spaces;
+}
