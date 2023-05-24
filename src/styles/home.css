@@ -10,3 +10,42 @@
 .card-text{
     white-space: break-spaces;
 }
+
+.like{
+    color: rgb(169, 0, 0);
+    height: 25px;
+    width: 25px;
+    
+}
+
+.like:hover{
+    color: rgb(255, 0, 0);
+}
+
+.likeContainer{
+    background-color: transparent;
+    border: none;
+}
+
+.boton{
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 3px;
+    color: #fff;
+    background: #000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    padding: 8px 16px;
+    text-align:center;
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+.boton:hover{
+        color: #000;
+        background: rgb(255, 218, 87);  
+}
+
