@@ -44,8 +44,20 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
 }
+
 .boton:hover{
         color: #000;
         background: rgb(255, 218, 87);  
 }
 
+hr{
+    color: darkgoldenrod;
+}
+
+.box{
+    color: darkgoldenrod;
+}
+
+.title{
+    color: darkgoldenrod;
+}
