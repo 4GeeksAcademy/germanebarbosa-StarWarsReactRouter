@@ -61,3 +61,21 @@ hr{
 .title{
     color: darkgoldenrod;
 }
+
+.icon{
+    margin-top: 4px;
+    margin-right: 5px;
+    color: black;
+}
+
+.element:hover .icon{
+    display: inline-block;
+}
+
+.icon:hover{
+    color: red;
+}
+
+ul{
+    width: 250px;
+}

@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../img/logo.png"
+import { useContext } from "react";
+
+import { Context } from "../store/appContext"; 
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
+
+	console.log(store.favorites);
 	return (
 		<nav className="navbar navbar-expand-lg bg-body-tertiary">
 			<div className="container-fluid">
@@ -11,13 +17,17 @@ export const Navbar = () => {
 				</Link>
 				<div className="navbar-end" id="navbarSupportedContent">
 					<div className="dropdown">
-						<button className="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<button className="dropdown-toggle boton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Favorites
 						</button>
 						<ul className="dropdown-menu dropdown-menu-sm-end">
-							<li><a className="dropdown-item" href="#">Action</a></li>
-							<li><a className="dropdown-item" href="#">Another action</a></li>
-							<li><a className="dropdown-item" href="#">Something else here</a></li>
+						{store.favorites.map( 
+							(item,index)=> 
+								<li className="dropdown-item element" key={index}>
+									<a>{item}</a>
+									<i className="icon fas fa-trash float-end" 
+										onClick={() => actions.removeOfFavorites(index)}></i>
+								</li>)}
 						</ul>
 					</div>
 				</div>

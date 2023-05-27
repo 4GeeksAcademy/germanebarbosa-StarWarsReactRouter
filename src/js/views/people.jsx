@@ -1,7 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
-import logo from "../../img/logo.png"
+
+import Context from "../store/appContext";
 
 export const People = () => {
 

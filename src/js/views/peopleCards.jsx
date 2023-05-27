@@ -1,12 +1,13 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import {Link} from 'react-router-dom'
-
+import { useContext } from "react";
 import { FaHeart } from "react-icons/fa"
-import logo from "../../img/logo.png"
 import "../../styles/home.css";
 
+import { Context } from "../store/appContext"; 
+
 export const Card = (props) => {
+	const { actions } = useContext(Context);
 	
 	return (
 		<>
@@ -20,7 +21,7 @@ export const Card = (props) => {
 						Eye Color: {props.eye_color}<br/>
 						</p>
 					<Link to={"/people/"+props.uid} className="btn boton">Learn more</Link>
-					<Link to="/" className="btn float-end likeContainer"><FaHeart className="like"/></Link>
+					<Link onClick={()=>actions.addToFavorites(props.name)} className="btn float-end likeContainer"><FaHeart className="like"/></Link>
 				</div>
 			</div>
 		</>
